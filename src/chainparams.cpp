@@ -77,7 +77,7 @@ public:
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("fa09d204a83a768ed5a7c8d441fa62f2043abf420cff1226c7b4329aeb9d51cf");
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
-        consensus.nPowTargetTimespan = 1 * 60 * 60; // 1 hours
+        consensus.nPowTargetTimespan = 10 * 60;
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -119,7 +119,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x0f90ba3d18b78862f4aa884701e1e57739a9af403c3ba32671cf811da78ebcd9"));
 
        // vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
-       // vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
+       vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         //vSeeds.push_back(CDNSSeedData("loshan.co.uk", "seed-a.litecoin.loshan.co.uk", true));
